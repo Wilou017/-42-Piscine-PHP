@@ -1,0 +1,67 @@
+div.checkbox
+{
+	margin: auto;
+	margin-top: 15px;
+	width: 600px;
+	height: 250px;
+	background: grey;
+}
+
+div.checkbox input
+{
+	margin-bottom: 20px;
+}
+
+div.border_class
+{
+	margin: 70px auto 0px auto;
+	color: #1c2228;
+	font-size: 22px;
+	font-size: 2.2rem;
+	line-height: 22px;
+	line-height: 2.2rem;
+	text-align: center;
+	font-family: Times;
+	font-style: italic;
+	background: none;
+	position: relative;
+	text-transform: uppercase;
+	font-weight: normal;
+	border-bottom: 1px solid black;
+}
+
+div.articles
+{
+	float: left;
+	margin-left: 20px;
+	margin-top: 20px;
+	width: 200px;
+	height: 300px;
+	background-color: #01579b;
+	color: #fff;
+}
+
+div.img_article
+{
+	position: relative;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 200px;
+	background-repeat: no-repeat;
+	background-size: 200px 200px;
+}
+div.info_article
+{
+	padding: 10px;
+}
+div.info_article p
+{
+	margin: auto;
+	text-align: left;
+	line-height: px;
+}
+
+div.big_articles{
+	overflow: hidden;
+}

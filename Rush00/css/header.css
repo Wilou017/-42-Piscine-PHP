@@ -1,0 +1,80 @@
+@import 'menu.css';
+
+.header {
+	height: 75px;
+	background-color: #01579b;
+	overflow: hidden;
+	position: fixed;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	right: 0;
+	-webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+.header .logo {
+		float: left;
+		margin-top: 7px;
+		margin-left: 30px;
+		display: block;
+		width: 150px;
+		height: 60px;
+		-webkit-background-size: 150px 60px;
+		background-size: 150px 60px;
+		background-image: url('../img/logo.png');
+	}
+
+.header .menuico {
+	display: none;
+}
+
+.search-button {
+	box-sizing: border-box;
+	position: absolute;
+	right: 48px;
+	color: #fff;
+	background: transparent center center no-repeat;
+	background-size: 24px 24px;
+	cursor: pointer;
+	border: 0;
+	display: block;
+	height: 42px;
+	overflow: hidden;
+	top: 13px;
+	width: 42px;
+	z-index: 2;
+}
+
+@media screen and (max-width: 810px) {
+	.search-button {
+		height: 24px;
+		top: 6px;
+		width: 24px;
+	}
+	.header{
+			height: 37px;
+		}
+	.header .logo {
+		width: 75px;
+		height: 30px;
+		background-size: 75px 30px;
+		-webkit-background-size: 75px 30px;
+		margin: 7px auto;
+		float: none;
+	}
+	.header .menuico {
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-o-user-select: none;
+		user-select: none;
+		margin-top: 6px;
+		margin-left: 20px;
+		font-family: 'Material Icons';
+		color: #fff;
+		font-size: 20px;
+		display: block;
+		float: left;
+		cursor: pointer;
+	}
+}

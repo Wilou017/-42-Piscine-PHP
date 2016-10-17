@@ -1,0 +1,1 @@
+DELETE FROM `db_amaitre`.`ft_table` ORDER BY `id` ASC LIMIT 5;

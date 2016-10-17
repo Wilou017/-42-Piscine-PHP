@@ -1,0 +1,65 @@
+.pop_up
+{
+	position: fixed;
+    top: 15%;
+    width: 600px;
+    left: calc(50% - 300px);
+    z-index: 9998;
+    color: #000;
+    background-color: #01579B;
+	padding: 6px;
+    display: none;
+    border: 5px solid black;
+}
+
+div > h2
+{
+	text-align: center;
+	background-color: #01579B;
+}
+div.pop_up p
+{
+	width: calc(100% -20px);
+    padding: 10px;
+    border: 2px solid;
+    padding-left: 20px;
+    font-size: 16px;
+	margin-top: 15px;
+	background-color: white;
+}
+
+.info_gauche
+{
+	float: left;
+	width: calc(50% - 10px);
+	padding: 5px;
+}
+.info_droite
+{
+	float: left;
+	width: calc(50% - 10px);
+	padding: 5px;
+}
+.message
+{
+float: left;
+margin: auto;
+margin-top: 10px;
+margin-left: 5px;
+width: calc(100% - 10px);
+height: 150px;
+font-size: 16px;
+border-radius: 10px;
+}
+.img_article
+{
+	display: block;
+	margin: 0 auto;
+	height: 200px;
+}
+
+h2.info
+{
+	color: #fff;
+	margin: 10px 0;
+}

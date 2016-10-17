@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<input type="number" min="0" step="1" id="left" name="left">
+	<select name="op">
+		<option>+</option>
+		<option>-</option>
+		<option>*</option>
+		<option>/</option>
+		<option>%</option>
+	</select>
+	<input type="number" min="0" step="1" id="right" name="right">
+	<input type="submit" name="tm" value="Try me!">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		var op;
+		var result;
+		var lv;
+		var rv;
+
+		$(document).ready(function() {
+			$('input[type="submit"]').on('click', function() {
+				op = $("select option:selected").text();
+
+				lv = parseInt($('input#left').val(), 10);
+				rv = parseInt($('input#right').val(), 10);
+
+				if (lv < 0 || rv < 0 ||
+					!Number.isInteger(lv) || !Number.isInteger(rv) ||
+					lv != $('input#left').val() || rv != $('input#right').val())
+					result = "Error :(";
+
+				else if ((op == "/" || op == "%") && $('input#right').val() == 0)
+					result = "It's over 9000!";
+
+				else
+				{
+					switch(op) {
+						case '/':
+							result = lv / rv;
+							break;
+						case '%':
+							result = lv % rv;
+							break;
+						case '+':
+							result = lv + rv;
+							break;
+						case '-':
+							result = lv - rv;
+							break;
+						case '*':
+							result = lv * rv;
+							break;
+						default:
+							result = "Error :(";
+					}
+				}
+				console.log(result);
+				alert(result);
+			});
+		});
+
+		setInterval(function() { alert('Please, use me...') }, 30000);
+	</script>
+</body>
+</html>

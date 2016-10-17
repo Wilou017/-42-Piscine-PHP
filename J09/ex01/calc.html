@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<input type="number" min="0" step="1" id="left" name="left">
+	<select name="op">
+		<option>+</option>
+		<option>-</option>
+		<option>*</option>
+		<option>/</option>
+		<option>%</option>
+	</select>
+	<input type="number" min="0" step="1" id="right" name="right">
+	<input type="submit" name="tm" value="Try me!">
+	<script type="text/javascript">
+		var submit = document.querySelector('input[type="submit"]');
+		var left = document.querySelector('input#left');
+		var right = document.querySelector('input#right');
+		var select = document.querySelector('select');
+		var op;
+		var result;
+		var lv;
+		var rv;
+
+		submit.addEventListener('click', function (event) {
+			op = select.options[select.selectedIndex].value;
+
+			lv = parseInt(left.value, 10);
+			rv = parseInt(right.value, 10);
+
+			if (lv < 0 || rv < 0 ||
+				!Number.isInteger(lv) || !Number.isInteger(rv) ||
+				lv != left.value || rv != right.value)
+				result = "Error :(";
+
+			else if ((op == "/" || op == "%") && right.value == 0)
+				result = "It's over 9000!";
+
+			else
+			{
+				switch(op) {
+					case '/':
+						result = lv / rv;
+						break;
+					case '%':
+						result = lv % rv;
+						break;
+					case '+':
+						result = lv + rv;
+						break;
+					case '-':
+						result = lv - rv;
+						break;
+					case '*':
+						result = lv * rv;
+						break;
+					default:
+						result = "Error :(";
+				}
+			}
+			console.log(result);
+			alert(result);
+		});
+
+		setInterval(function() { alert('Please, use me...') }, 30000);
+	</script>
+</body>
+</html>

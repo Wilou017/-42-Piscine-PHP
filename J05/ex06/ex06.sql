@@ -1,0 +1,1 @@
+SELECT `titre`, `resum` FROM `db_amaitre`.`film` WHERE `resum` LIKE '%vincent%' ORDER BY `id_film` ASC;

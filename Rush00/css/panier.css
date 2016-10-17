@@ -1,0 +1,124 @@
+.total
+{
+    display: table;
+    height: 65px;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+	border-bottom: 1px solid grey;
+}
+
+.nombre_article
+{
+    color: #22398e;
+    font-size: 1.8em;
+    font-weight: bold;
+    padding: 0 5px 0 0;
+    position: relative;
+	height: 60px;
+	display: inline-block;
+	vertical-align: center;
+}
+div.nombre_article p
+{
+	margin-top: 15px;
+}
+.prix
+{
+	color: red;
+	margin-top: 15px;
+	padding: 0 20px 0 0;
+	text-align: center;;
+	width: 180px;
+	font-weight: normal;
+	display: inline-block;
+	font-size: 2em;
+}
+.articles
+{
+	padding: 5px;
+	margin-top: 45px;
+	overflow: hidden;
+	border-bottom: 1px solid grey;
+	background: #01579b;
+}
+.img_article
+{
+	margin-top: 12px;
+	width: 175px;
+	height: 175px;
+	background-repeat: no-repeat;
+	background-size: 175px 175px;
+}
+.detail_article
+{
+	padding: 10px;
+	width: calc(100% - 195px);
+}
+div.articles > div
+{
+	float: left;
+}
+div.detail_article > p
+{
+	float: left;
+    font-size: 12px;
+	min-width: 150px;
+	padding: 15px;
+	border: 1px solid black;
+	margin-top: 15px;
+	margin-right: 5px;
+	background: white;
+}
+.number
+{
+	margin-left: 15px;
+    height: 20px;
+    width: 75px;
+    padding: 2px;
+    border: 1px solid black;
+	font-size: 10px;
+	display: initial;
+}
+div.delete
+{
+	position: relative;
+    background-image: url('/img/poubelle_318-85945.jpg');
+    background-size: 50px 50px;
+    height: 50px;
+    width: 50px;
+    border-radius: 7px;
+    float: right;
+	bottom: -30px;
+}
+
+.bot_footer
+{
+	position: fixed;
+	bottom: 100px;
+	width: 100%;
+	height: 50px;
+}
+.validate
+{
+	position: absolute;
+	border: 2px solid black;
+	width: 150px;
+	right: 200px;
+	padding: 10px;
+	background-color: #01579b;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+div.clear
+{
+	margin: 100px 0;
+}
+
+@media screen and (max-width: 810px) {
+	.validate
+	{
+		right: 0;
+	}
+}

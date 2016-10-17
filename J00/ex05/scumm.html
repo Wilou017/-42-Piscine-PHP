@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Day of the 42</title>
+		<link rel="stylesheet" href="doft.css">
+	</head>
+	<body>
+		<div class="content">
+			<div id="header">
+				<span id="logo" title="Day of the 42"></span>
+				<span id="loupe" title="Loupe"></span>
+				<a href="scumm.html" id="reload" title="Recommencer au début"></a>
+				<a href="http://google.ca" id="close" title="Déconnecter"></a>
+			</div>
+			<div id="column1">
+				<img class="action" id="fleche" title="Avancer" src="resources/arrow.png" alt="Avancer"/>
+				<img class="action" id="main" title="Prendre" src="resources/main.png" alt="Prendre"/>
+				<img class="action" id="oeil" title="Regarder" src="resources/oeil.png" alt="Regarder"/>
+				<img class="action" id="tools" title="Utiliser" src="resources/outil.png" alt="Utiliser"/>
+				<img class="action" id="chat" title="Parler" src="resources/chat-icon.png" alt="Parler"/>
+			</div>
+			<div id="column2">
+				<div id="terre"></div>
+				<div id="cluster">
+					<img src="" alt="photo" id="photo">
+					<a title="Chaise" id="chaise"></a>
+					<a title="Ordinateur" id="ordi"></a>
+				</div>
+				<div id="desc">Ordinateur: <br>Ce mex est casser il faudrais des outils pour le reparer <br><br>Chaine: <br> Il y a quelque chose sur la chaise tend la main pour l'attraper</div>
+			</div>
+			<div id="column3">
+				<span id="towel" title="Towel"></span>
+			</div>
+			<div class="popup">
+				<span id="text"></span> <br><br>
+				<form id="inputform">
+					<input type="text" id="input">
+					<input type="submit" value="Repondre">
+				</form>
+				<input type="submit" id="closepopup" value="ok" style="display: none;">
+			</div>
+		</div>
+	</body>
+	<script
+			  src="https://code.jquery.com/jquery-3.1.1.js"
+			  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+			  crossorigin="anonymous"></script>
+	<script type="text/javascript" src="app.js"></script>
+</html>

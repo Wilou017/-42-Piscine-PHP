@@ -1,0 +1,163 @@
+	body{
+		margin: 0;
+		padding: 0;
+		font-family: sans-serif;
+		background: url('http://aymericdev.fr/img/bg.jpg') no-repeat center fixed;
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+	table, tbody{
+		min-height: 100vh;
+		margin: 5% auto;
+		width: 90%;
+		border-collapse: collapse;
+	}
+
+	/* text elem style */
+
+	td > div.weight{
+		text-align: right;
+		font-size: 12;
+	}
+	td > div.symb{
+		text-align: center;
+		height: 75%;
+		font-size: 48;
+	}
+	td > div.skip{
+		text-align: center;
+		height: 75%;
+		font-size: 24;
+	}
+	td > div.num{
+		font-size: 12;
+	}
+
+	/*  Case style  */
+	td{
+		width: 100px;
+		height: 75px;
+	}
+	td.void{
+		width: 100px;
+		height: 100px;
+	}
+	td.purple,
+	td.orange,
+	td.lorange,
+	td.green,
+	td.lgreen,
+	td.yellow,
+	td.grey,
+	td.pink,
+	td.blue,
+	td.tur{
+		border: 1px solid #000;
+	}
+	td.purple{
+		background-color: #AB91FF;
+	}
+	td.orange{
+		background-color: #FFC591;
+	}
+	td.lorange{
+		background-color: #FFDF91;
+	}
+	td.green{
+		background-color: #B8FF91;
+	}
+	td.lgreen{
+		background-color: #ECFF91;
+	}
+	td.yellow{
+		background-color: #FFF991;
+	}
+	td.grey{
+		background-color: #C8C8C8;
+	}
+	td.pink{
+		background-color: #F991FF;
+	}
+	td.blue{
+		background-color: #91DFFF;
+	}
+	td.tur{
+		background-color: #92FF9F;
+	}
+
+@media screen and (max-width: 1400px){
+	td > div.weight{
+		font-size: 7;
+	}
+	td > div.symb{
+		font-size: 30;
+	}
+	td > div.skip{
+		font-size: 15;
+	}
+	td > div.num{
+		font-size: 7;
+	}
+	td{
+		width: 75px;
+		height: 50px;
+	}
+}
+
+@media screen and (max-width: 900px){
+	td > div.weight{
+		font-size: 6;
+	}
+	td > div.symb{
+		font-size: 24;
+	}
+	td > div.skip{
+		font-size: 12;
+	}
+	td > div.num{
+		font-size: 6;
+	}
+	td{
+		width: 50px;
+		height: 35px;
+	}
+
+}
+
+@media screen and (max-width: 750px){
+	td > div.weight{
+		font-size: 3;
+	}
+	td > div.symb{
+		font-size: 12;
+	}
+	td > div.skip{
+		font-size: 6;
+	}
+	td > div.num{
+		font-size: 3;
+	}
+	td{
+		width: 50px;
+		height: 20px;
+	}
+}
+
+@media screen and (max-width: 500px){
+	td > div.weight{
+		font-size: 1.5;
+	}
+	td > div.symb{
+		font-size: 6;
+	}
+	td > div.skip{
+		font-size: 3;
+	}
+	td > div.num{
+		font-size: 1.5;
+	}
+	td{
+		width: 50px;
+		height: 6px;
+	}
+}

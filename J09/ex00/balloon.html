@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div#baloon {
+			height: 200px;
+			width: 200px;
+			border-radius: 50%;
+			background-color: red;
+			margin: 25% auto 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="baloon"></div>
+	<script type="text/javascript">
+		var baloon = document.querySelector('div#baloon');
+
+		var color = ['red', 'green', 'blue'];
+		var i = 3000;
+		baloon.addEventListener('click', function (event) {
+			i++;
+			if (this.offsetWidth > 410)
+			{
+				i = 3000;
+				this.style.width = "200px";
+				this.style.height = this.style.width;
+				this.style.backgroundColor = color[i];
+			}
+			else
+			{
+				this.style.backgroundColor = color[i % 3];
+				this.style.width = (this.offsetWidth + 10) + "px";
+				this.style.height = this.style.width;
+			}
+		});
+		baloon.addEventListener('mouseout', function (event) {
+			if (this.offsetWidth > 204)
+			{
+				i--;
+				this.style.backgroundColor = color[i % 3];
+				this.style.width = (this.offsetWidth - 5) + "px";
+				this.style.height = this.style.width;
+			}
+		});
+	</script>
+</body>
+</html>

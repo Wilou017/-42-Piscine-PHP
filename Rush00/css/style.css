@@ -1,0 +1,49 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+
+@import 'header.css';
+@import 'form.css';
+@import 'footer.css';
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	font-family: 'Roboto';
+}
+
+a{
+	color: inherit;
+}
+
+.content {
+	width: calc(100% - 210px);
+	margin: 80px 10px 0px 0px;
+	padding-left: 200px;
+	min-height: calc(100vh - 155px);
+}
+
+@media screen and (max-width: 810px) {
+	.content{
+		min-height: calc(100vh - 87px);
+		margin: 40px 10px 10px 0px;
+		width: calc(100% - 20px);
+		padding: 0 10px 0 10px;
+	}
+	body.shownav{
+		overflow: hidden;
+	}
+	body.shownav div.overlay{
+		display: block;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 0.5;
+		background-color: #2F2F2F;
+	}
+}

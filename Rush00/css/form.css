@@ -1,0 +1,174 @@
+form{
+	padding-top: 30px;
+}
+
+.MDgroup{
+	position:relative;
+	margin-bottom:45px;
+}
+
+input{
+	font-size:18px;
+	padding:10px 10px 10px 5px;
+	display:block;
+	width: calc(100% - 20px);
+	border:none;
+	border-bottom:1px solid #757575;
+}
+
+select {
+	font-family: inherit;
+	background-color: transparent;
+	padding:10px 10px 10px 5px;
+	width: 100%;
+	margin-bottom: 45px;
+	margin-right: 1px;
+	font-size: 16px;
+	color: #757575;
+	border: none;
+	border-bottom: 1px solid #757575;
+}
+
+select:focus {
+  outline: none;
+}
+
+select.trois
+{
+	width: calc(33% - 2px);
+}
+
+*:invalid,
+*:-moz-submit-invalid,
+*:-moz-ui-invalid{
+	box-shadow: none;
+}
+
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear
+{
+	display: none;
+}
+
+input[type="submit"] {
+	color: #FFF;
+	width: calc(100% - 5px);
+}
+
+input[type="submit"].primary {
+	background-color: #2196F3;
+}
+
+input[type="submit"].danger {
+	background-color: #C5332A;
+}
+
+input:focus { outline:none; }
+
+label{
+	color:#999;
+	font-size:18px;
+	font-weight:normal;
+	position:absolute;
+	pointer-events:none;
+	left:5px;
+	top:10px;
+	transition:0.2s ease all;
+	-moz-transition:0.2s ease all;
+	-webkit-transition:0.2s ease all;
+}
+
+input:focus ~ label, input:valid ~ label{
+	top:-20px;
+	font-size:14px;
+	color:#5264AE;
+}
+
+.bar  {
+	position:relative;
+	display:block;
+	width: calc(100% - 5px);
+}
+
+.bar:before, .bar:after {
+  content:'';
+  height:2px;
+  width:0;
+  bottom:1px;
+  position:absolute;
+  background:#5264AE;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+
+.eye {
+	font-family: 'Material Icons';
+	right: 15px;
+	position: absolute;
+	top: 5px;
+	cursor: pointer;
+	display: none;
+	font-size: 26px;
+}
+
+.eye.show {
+	display: block;
+}
+
+input.error ~ label{
+  color: red;
+}
+
+input.error ~ .bar:before, input.error ~ .bar:after {
+	background:red;
+	width:50%;
+}
+
+.bar:before {
+	left:50%;
+}
+.bar:after {
+	right:50%;
+}
+
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+	width:50%;
+}
+
+.highlight {
+	position:absolute;
+	height:60%;
+	width:100px;
+	top:25%;
+	left:0;
+	pointer-events:none;
+	opacity:0.5;
+}
+
+@media screen and (max-width: 810px) {
+	select {
+		margin-right: 0px;
+	}
+}
+
+@media screen and (min-width: 810px) {
+	input:focus ~ .highlight {
+		-webkit-animation:inputHighlighter 0.3s ease;
+		-moz-animation:inputHighlighter 0.3s ease;
+		animation:inputHighlighter 0.3s ease;
+	}
+
+	@-webkit-keyframes inputHighlighter {
+		from { background:#5264AE; }
+		to  { width:0; background:transparent; }
+	}
+	@-moz-keyframes inputHighlighter {
+		from { background:#5264AE; }
+		to  { width:0; background:transparent; }
+	}
+	@keyframes inputHighlighter {
+		from { background:#5264AE; }
+		to  { width:0; background:transparent; }
+	}
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div#baloon {
+			height: 200px;
+			width: 200px;
+			border-radius: 50%;
+			background-color: red;
+			margin: 25% auto 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="baloon"></div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		var color = ['red', 'green', 'blue'];
+		var i = 3000;
+		$(document).ready(function() {
+			$('div#baloon').on('click', function() {
+				i++;
+				if ($(this).outerWidth() > 410)
+				{
+					i = 3000;
+					$(this).css("width", "200px");
+					$(this).css("height", $(this).css("width"));
+					$(this).css("background-color", color[i]);
+				}
+				else
+				{
+					$(this).css("background-color", color[i % 3]);
+					$(this).css("width", ($(this).outerWidth() + 10) + "px");
+					$(this).css("height", $(this).css("width"));
+				}
+			});
+			$('div#baloon').on('mouseout', function() {
+				if ($(this).outerWidth() > 204)
+				{
+					i--;
+					$(this).css("background-color", color[i % 3]);
+					$(this).css("width", ($(this).outerWidth() - 5) + "px");
+					$(this).css("height", $(this).css("width"));
+				}
+			});
+		});
+	</script>
+</body>
+</html>
